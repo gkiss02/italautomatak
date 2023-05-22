@@ -1,0 +1,15 @@
+<%- include('header', {pagetitle: "Üdítő szerkeztése"}) %>
+    <h3>Üdítő szerkeztése</h3>
+    <div class="container">
+        <form method="post">
+            <label for="brand">Márka:</label>
+            <input type="text" name="brand" id="brand" value="<%= (typeof drink === 'undefined') ? '' : drink.brand %>"><br>
+            <label for="taste">Íz:</label>
+            <input type="text" name="taste" id="taste" value="<%= (typeof drink === 'undefined') ? '' : drink.taste %>"><br>
+            <label for="price">Ár:</label>
+            <input type="number" name="price" id="price" value="<%= (typeof drink === 'undefined') ? '' : drink.price %>"><br>
+            <a class="cancel btn" onclick="location.href='/drinks';">Mégse</a>
+            <input type="submit" value="Mentés" class="add btn"> 
+        </form>
+    </div>
+<%- include('footer') %>

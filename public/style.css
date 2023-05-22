@@ -1,0 +1,146 @@
+:root {
+    --button-blue: #1596BD;
+    --table-dark: #293752;
+    --table-ligth: #E7EDFF;
+    --button-green: #4EBC3B;
+    --button-red: #ED6A5E;
+    --background-grey: #E3E3E3;
+    --radius: 16px
+  }
+
+body {
+  background-color: var(--background-grey);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.drinks-button, .automatas-button {
+  background-color: var(--button-blue);
+  border: var(--button-blue) 2px solid;
+  font-size: 18px;
+  padding: 5px;
+  width: 120px;
+  color: var(--button-blue);
+  cursor: pointer;
+}
+
+.drinks-button {
+  border-top-left-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
+}
+
+.automatas-button {
+  margin: -6px;
+  border-top-right-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+table, th, td {
+    border: 1px solid black;
+  }
+
+table {
+    font-size: 14px;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th, td {
+  padding: 2px 7px;
+}
+
+th {
+  background-color: var(--table-dark);
+  color: white;
+}
+
+tr {
+  background-color: white;
+}
+
+tr:nth-child(even) {
+  background-color: var(--table-ligth);
+}
+
+tr:hover {
+  background-color: lightgray;
+}
+
+.container {
+    width: fit-content;
+}
+
+input {
+  border: black .5px solid;
+  border-radius: 8px;
+}
+
+form {
+  text-align: right;
+}
+
+input {
+  text-align: right;
+  padding: 2px 12px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  display: none;
+  -moz-appearance: textfield;
+}
+
+.btn {
+    border: none;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+    float: right;
+    font-size: 14px;
+    border-radius: var(--radius);
+    padding: 4px 10px;
+    cursor: pointer;
+  }
+
+  .add {
+    background-color: var(--button-green);
+  }
+
+  .add:hover {
+    background-color: rgb(50, 130, 35); 
+  }
+
+  .cancel {
+    background-color: var(--button-red);
+    margin-left: 2px;
+  }
+
+  .cancel:hover {
+    background-color: #a83228;
+  }
+
+  .back {
+    background-color: var(--button-yellow);
+    margin-left: 2px;
+  }
+
+  svg {
+    width: 16px;
+  }
+
+  .eye:hover {
+    fill:cornflowerblue;
+  }
+
+  .pen:hover {
+    fill: beige;
+  }
+
+  .trash:hover {
+    fill: red;
+  }

@@ -1,0 +1,11 @@
+<%- include('header', {pagetitle: "Automata szerkeztése"}) %>
+    <h3>Automata szerkeztése</h3>
+    <div class="container">
+        <form method="post">
+            <label for="machineName">Automata címe:</label>
+            <input type="text" name="machineName" id="machine-text" value="<%= (typeof machine === 'undefined') ? '' : machine.name %>"><br>
+            <a class="cancel btn" onclick="location.href='/';">Mégse</a>
+            <input type="submit" value="Mentés" class="add btn"> 
+        </form>
+    </div>
+<%- include('footer') %>

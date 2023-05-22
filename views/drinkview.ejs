@@ -1,0 +1,27 @@
+<%- include('header', {pagetitle: "Üdítő lista"}) %>
+    <h3><%= machine.name %></h3>
+    <div class="container">
+        <table>
+            <thead>
+                <th>Márka</th>
+                <th>Íz</th>
+                <th>Ár</th>
+                <th></th>
+            </thead>
+            <form method="post">
+                <% drinks.forEach(function(drink){ %>
+                    <tr>
+                        <td><%= drink.brand %></td>
+                        <td><%= drink.taste %></td>
+                        <td><%= drink.price %></td>
+                        <td>
+                            <input type="checkbox" name="selectedDrinks" value="<%= drink._id %>" <% if (machine._drinks != undefined && machine._drinks.some(drinkId => drinkId.equals(drink._id))) { %> checked <% } %>>
+                        </td>
+                    </tr>
+                    <% }) %>
+                </table>
+                <a class="cancel btn" onclick="location.href='/';">Mégse</a>
+                <input type="submit" value="Mentés" class="add btn">
+            </form>
+    </div>
+<%- include('footer') %>
